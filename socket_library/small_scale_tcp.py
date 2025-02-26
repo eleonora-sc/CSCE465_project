@@ -3,9 +3,8 @@ import threading
 import requests
 
 def send_requests():
-    url = "http://172.16.98.225"
+    url = "http://172.16.98.225:80"
     for i in range(0,10):
-        time.sleep(0.2)
         try:
             response = requests.get(url)
             print(i)
@@ -14,3 +13,4 @@ def send_requests():
 
 if __name__ == '__main__':
     send_requests()
+
