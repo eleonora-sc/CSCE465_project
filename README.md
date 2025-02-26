@@ -8,6 +8,7 @@ In order for this project to work on your system you will need a few things inst
 
 - Python (Lastest Version)
 - Flask Framework 
+- Scapy Library ($ pip install scapy)
 
 ## How to run the project?
 
