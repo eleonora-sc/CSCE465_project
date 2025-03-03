@@ -13,8 +13,8 @@ def syn_flood(thread_id):
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
-            # Random source port to more accurately simulate (D)DoS
-            src_port = random.randint(5000, 65535) # this range chosen because lower port numbers are usually reserved for other processes
+            # Random source port to more accurately simulate DDoS
+            src_port = random.randint(5000, 65535) # This range chosen because lower port numbers are usually reserved for other processes
             s.bind(("127.0.0.1", src_port))
             print(f"[Thread {thread_id}] Using source port: {src_port}")
 
@@ -31,12 +31,12 @@ def syn_flood(thread_id):
             s.close()
             print(f"[Thread {thread_id}] Connection closed prematurely (SYN flood behavior)")
 
-            # sleep is to avoid overwhelming the OS
+            # Sleep is to avoid overwhelming the OS
             time.sleep(0.1)
         except Exception as e:
             print(f"[Thread {thread_id}] Connection failed: {e}")
 
-# Launch multiple threads to simulate a SYN flood (DDoS)
+# Launch multiple threads to simulate DDoS
 threads = []
 for i in range(NUM_THREADS):
     print(f"[Main] Starting thread {i}")
