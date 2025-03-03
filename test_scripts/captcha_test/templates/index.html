@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web captcha implementation</title>
+</head>
+<body>
+    <h2>Enter the CAPTCHA</h2>
+    <p>CAPTCHA: <strong>{{ captcha }}</strong></p>
+    <form method="post">
+        <input type="text" name="captcha_input" required>
+        <button type="submit">Submit</button>
+    </form>
+    <p style="color: red;">{{ message }}</p>
+</body>
+</html>
