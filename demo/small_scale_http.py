@@ -1,5 +1,4 @@
 import time
-import threading
 import requests
 
 def send_requests():
